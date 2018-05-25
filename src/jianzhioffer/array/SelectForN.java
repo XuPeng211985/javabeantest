@@ -8,7 +8,10 @@ package jianzhioffer.array;
  */
 public class SelectForN {
     public static void main(String[] args) {
-        int[] arr = {1,2,8,9,2,4,8,12,4,7,10,13,6,8,11,15};
+        int[] arr = {1,2,8,9,
+                     2,4,8,12,
+                     4,7,10,13,
+                     6,8,11,15};
         int index = find(arr,4,4,15);
         System.out.println(index);
     }
@@ -21,12 +24,15 @@ public class SelectForN {
         int low = 0;
         int cloumn = cloumns -1;
         while(cloumn >= 0 && low <= lows-1){
+            //第一次定位到第一行的最后一个元素，查找成功直接返回 失败继续向下
             if(m == arr[low * cloumns + cloumn]){
                 return low * cloumns + cloumn;
             }
+            //选小了去掉第一行
             if(m > arr[low * cloumns + cloumn]){
                 low ++;
             }else{
+                //选大了去掉第一列
                 cloumn --;
             }
         }
