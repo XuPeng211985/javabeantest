@@ -3,6 +3,16 @@ public class BinaryTreeNode {
     private int data;
     private BinaryTreeNode left;
     private BinaryTreeNode right;
+
+    public BinaryTreeNode getParent() {
+        return parent;
+    }
+
+    public void setParent(BinaryTreeNode parent) {
+        this.parent = parent;
+    }
+
+    private BinaryTreeNode parent;
     public BinaryTreeNode(int data) {
         this.data = data;
     }
