@@ -7,7 +7,7 @@ class Operate{
      * @throws FileNotFoundException
      */
     public void serializable(Person person) throws FileNotFoundException, IOException {
-        ObjectOutputStream outputStream=new ObjectOutputStream(new FileOutputStream("a.txt"));
+        ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("a.txt"));
         outputStream.writeObject(person);
     }
     /**
@@ -17,7 +17,7 @@ class Operate{
      * @throws ClassNotFoundException
      */
     public Person deSerializable() throws FileNotFoundException, IOException, ClassNotFoundException{
-        ObjectInputStream ois=new ObjectInputStream(new FileInputStream("a.txt"));
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("a.txt"));
         return (Person) ois.readObject();
     }
 
