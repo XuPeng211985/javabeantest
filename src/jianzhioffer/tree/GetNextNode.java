@@ -36,11 +36,12 @@ public class GetNextNode {
             //如果当前节点是父亲节点的右孩子，那么往二叉树的顶层寻找
             //直到找到一个左孩子为止
             while(pParent != null && pCurrent == pParent.getRight()){
-                //孩子变父亲
+                //孩子变为父亲
                 pCurrent = pParent;
-                //父亲变父亲的父亲
+                //父亲变为父亲的父亲
                 pParent = pParent.getParent();
             }
+            //找到的父亲节点便是我们要找的下一个节点
             pNext = pParent;
         }
         return pNext;

@@ -1,7 +1,5 @@
 package jianzhioffer.tree;
-
 import jianzhioffer.utils.BinaryTreeNode;
-
 /**
  * 题目描述：根据二叉树的前序遍历序列和中序遍历序列重建该树
  *
@@ -33,7 +31,7 @@ public class ConstructTree {
         return ConstructCode(0,preorder.length - 1,0,inorder.length - 1,preorder,inorder);
     }
     /**
-     *构建二叉树
+     *构建二叉子树
      * @param startPre 先序遍历的起始下标
      * @param endPre   先序遍历的结束下标
      * @param startIn  中序遍历的起始下标

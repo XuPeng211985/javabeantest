@@ -1,6 +1,6 @@
 package keyword.inner;
-
 import javax.swing.*;
+import java.util.Map;
 
 /**
  * 内部类定义：定义在另一个类中的类
@@ -24,6 +24,10 @@ import javax.swing.*;
  *                      此时我们可以把该类定义为匿名内部类，就像例子中的实现ActionListener接口
  *                      的内部类，我们只需要一个实现接口的实例，所以此时我们可以直接
  *                      在该接口后面的大括号里实现它的抽象方法，这样可以节省一些不必要的代码量
+ *  闭包和内部类：当内部类使用外部的局部变量时，实际上形成了闭包，被使用的这个
+ *          局部变量不会随着方法的执行完毕而消失，因为内部类的实例可能还会用到
+ *          这个变量，所以如果在内部类中使用到了外部方法的变量，需要用final修饰
+ *          JDK8中将会主动识别，并把局部变量设为final
  */
 public class InnerClassTest {
     public static void main(String[] args) {
