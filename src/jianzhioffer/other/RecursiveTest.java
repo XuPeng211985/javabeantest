@@ -11,6 +11,7 @@ package jianzhioffer.other;
  */
 public class RecursiveTest {
     public static void main(String[] args) {
+        //递归10000000 栈溢出
      int result =  AddFrom1ToN_RecurSive(100);
      long sum = AddFrom1ToN_Interative(10000000);
         System.out.println(result);
